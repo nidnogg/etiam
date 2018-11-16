@@ -1,5 +1,5 @@
 # Etiam
-Está é a página do projeto de Banco de Dados de 2018.2.
+Esta é a página do projeto de Banco de Dados de 2018.2.
 
 ## Dependências
 Por enquanto, temos apenas: 
@@ -31,3 +31,6 @@ https://trello.com/b/DYtf8kYd/banco-de-dados-trabalho-final
 
 * Integrando MySQl, node e express
 https://www.terlici.com/2015/08/13/mysql-node-express.html
+
+* Kaggle da NASA
+kaggle.com/nasa/datasets
