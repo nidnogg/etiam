@@ -1,0 +1,51 @@
+# Entidades Fortes
+
+Astronaut(Name, Status, BirthDate, Gender, Year)
+  PK(Name)
+
+Falecimento(ID, DeathDate, Cause)
+  PK(ID)
+
+Mission(Name, Description, StartDate)
+  PK(Name)
+
+SpaceWalk(ID, Date, Duration, Purpose)
+  PK(ID)
+
+Facility(Facility, Status, Center, URLLink, City, State, Zipcode, Location)
+  PK(Facility)
+
+SolarEclipse(CatalogNumber, EclipseTime, DeltaT, CalendarDate, Latitude, Longitude, TotalEclipseDuration, CentralDuration)
+  PK(CatalogNumber)
+
+# Entidades Fracas
+
+# Relacionamento Binário 1:1
+
+# Relacionamento Binário 1:N
+
+# Relacionamento Binário N:N
+
+ParticipaMissao(AstrounautName, MissionName, JoinedDate)
+  PK(AstrounautName, MissionName)
+  FK(AstrounautName) ref Astronaut(Name)
+  FK(MissionName) ref Mission(Name)
+
+FazerSpaceWalk(IdSpaceWalk, AstrounautName)
+  PK(IdSpaceWalk, AstrounautName)
+  FK(AstrounautName) ref Astrounaut(Name)
+  FK(IdSpaceWalk) ref SpaceWalk(ID)
+
+# Atributo Multivalorado
+
+UndergraduateMajor(AstrounautName, MajorName)
+  FK(AstrounautName) ref Astronaut(Name)
+  PK(AstrounautName, MajorName)
+
+# Relacionamento N-ário N>2 --> ATENCAO PARA PK()
+
+Morreu(IdFalecimento, AstrounautName, MissionName)
+  PK(IdFalecimento, AstrounautName)
+  FK(IdFalecimento) ref Falecimento(ID)
+  FK(AstrounautName) ref Astrounaut(Name)
+  FK(MissionName) ref Mission(Name)
