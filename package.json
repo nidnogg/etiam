@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Nidnogg/etiam#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "jquery-smooth-scroll": "^2.2.0",
     "nodemon": "^1.18.6"
   }
 }
