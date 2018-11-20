@@ -3,7 +3,7 @@
 Astronaut(Name, Status, BirthDate, Gender, Year)
   PK(Name)
 
-Falecimento(ID, DeathDate, Cause)
+Death(ID, DeathDate, Cause)
   PK(ID)
 
 Mission(Name, Description, StartDate)
@@ -26,12 +26,12 @@ SolarEclipse(CatalogNumber, EclipseTime, DeltaT, CalendarDate, Latitude, Longitu
 
 # Relacionamento Binário N:N
 
-ParticipaMissao(AstrounautName, MissionName, JoinedDate)
+ParticipatedMission(AstrounautName, MissionName, JoinedDate)
   PK(AstrounautName, MissionName)
   FK(AstrounautName) ref Astronaut(Name)
   FK(MissionName) ref Mission(Name)
 
-FazerSpaceWalk(IdSpaceWalk, AstrounautName)
+DoSpaceWalk(IdSpaceWalk, AstrounautName)
   PK(IdSpaceWalk, AstrounautName)
   FK(AstrounautName) ref Astrounaut(Name)
   FK(IdSpaceWalk) ref SpaceWalk(ID)
@@ -42,10 +42,10 @@ UndergraduateMajor(AstrounautName, MajorName)
   FK(AstrounautName) ref Astronaut(Name)
   PK(AstrounautName, MajorName)
 
-# Relacionamento N-ário N>2 --> ATENCAO PARA PK()
+# Relacionamento N-ário N>2 -->
 
-Morreu(IdFalecimento, AstrounautName, MissionName)
-  PK(IdFalecimento, AstrounautName)
-  FK(IdFalecimento) ref Falecimento(ID)
+Died(IdDeath, AstrounautName, MissionName)
+  PK(IdDeath, AstrounautName)
+  FK(IdDeath) ref Death(ID)
   FK(AstrounautName) ref Astrounaut(Name)
   FK(MissionName) ref Mission(Name)
