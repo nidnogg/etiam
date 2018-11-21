@@ -1,14 +1,23 @@
 CREATE DATABASE `BDGISELI`;
-CREATE TABLE Eclipse (
-    CalendarDate DATE,
+CREATE TABLE LunarEclipse (
+    CalendarDate VARCHAR(20),
     DeltaT INT,
     CatalogNumber INT PRIMARY KEY,
     TotalEclipseDuration FLOAT,
     CentralDuration FLOAT,
     EclipseTime FLOAT,
     Latitude VARCHAR(10),
-    Longitude VARCHAR(10),
-    Eclipse_TIPO INT
+    Longitude VARCHAR(10)
+);
+CREATE TABLE SolarEclipse (
+    CalendarDate VARCHAR(20),
+    DeltaT INT,
+    CatalogNumber INT PRIMARY KEY,
+    TotalEclipseDuration FLOAT,
+    CentralDuration FLOAT,
+    EclipseTime FLOAT,
+    Latitude VARCHAR(10),
+    Longitude VARCHAR(10)
 );
 CREATE TABLE Astronaut (
     BirthDate VARCHAR(20),
