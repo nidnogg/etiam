@@ -1,34 +1,141 @@
+/* ==========================================================================
+   Etiam html base styles
+
+   Font stack:
+   'BebasNeueRegular', sans-serif;
+   'Noto Sans', sans-serif;
+
+   Temp Fonts:
+   'bebasregular', sans-serif; 
+
+   
+   Color stack:
+   #05080f (black-ish) main background color
+   #FD096B (pink) main accent
+
+   ========================================================================== */
+@font-face {
+  font-family: 'bebasregular';
+  src: url('BEBAS___-webfont.eot');
+  src: url('BEBAS___-webfont.eot?#iefix') format('embedded-opentype'), url('BEBAS___-webfont.woff2') format('woff2'), url('BEBAS___-webfont.woff') format('woff'), url('BEBAS___-webfont.ttf') format('truetype'), url('BEBAS___-webfont.svg#bebasregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==========================================================================
+Main styles
+========================================================================== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #05080f;
+  color: #cdcdcd;
+  font-family: 'Noto Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'bebasregular', sans-serif !important;
+}
+
+h4, h5 {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+p {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+/* ==========================================================================
+Home section styles - contains NASA facts main menu screen with the four main project links
+========================================================================== */
+#home {
+  background-color: rgb(189, 71, 183);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+header.home_header {
+  text-align: center;
+  color: #F8E9D6;
+  padding-top: 20vh;
+}
+
+header.home_header>h1 {
+  font-size: 5em;
+}
+
+header.home_header>p {
+  color: #E3E2E1;
+  font-size: 1.3em;
+}
+
+.pink_dash_separator {
+  border-top: 5px solid #F50868;
+  position: relative;
+  display: inline-block;
+  width: 9%;
+}
+
+
+
+
+
+
+/* ==========================================================================
+Astronauts section styles - contains all astronaut data queries
+========================================================================== */
+/*  
 html {
-    position: relative;
-    min-height: 100%;
-    font-family: 'bebasregular';
-
-    overflow: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
-
-    scroll-behavior: smooth;
+  position: relative;
+  min-height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-
-body{
-    height:100%;
-    width: 400%;
-    color:#0E0E0E;
-    margin: 0 0 0 0 !important;
-    background-color: #F8E9D6;
+body {
+  height:100%;
+  width: 400%;
+  color:#0E0E0E;
+  margin: 0 0 0 0 !important;
+  background-color: #F8E9D6;    
 }
 
-.full_height{
- height: 100em;
+h1, h2, h3 {
+  font-family: 'bebasregular', sans-serif;
 }
-/*PAGES*/
 
+h4, h5 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+.full_height {
+  height: 100em;
+}
+
+#space_bg{
+  position: fixed;
+  z-index: -1;
+}
+
+*/
+
+/* ==========================================================================
+Section home
+========================================================================== */
+/*
 #home p{
   padding-top: 30px;
   color: #F6F6F6;
   font-size: 3rem;
-  font-family: 'bebasregular';
   letter-spacing: 3px;
 } 
 #home .title {
@@ -36,20 +143,23 @@ body{
   left: 29%;
   top: 3%;
   letter-spacing: 3px;
+  
 }
-/*PAGES END*/
-#space_bg{
-  position: fixed;
-  z-index: -1;
-}
-#smile{
+
+.main_header_text {
   margin:auto;
   vertical-align:middle;
-  /*color: #F50868;*/
   color: #F6F6F6;
   font-family: 'bebasregular';
-  font-size: 17rem;
+  font-size: 3em;
   letter-spacing: 3px;
+}
+.pink_dash_separator {
+  border-top: 5px solid #F50868;
+  position: relative;
+  display: inline-block;
+  width: 9%;
+
 }
 #marker{
   width: 75px;
@@ -61,9 +171,8 @@ body{
 }
 
 
-#giseliLinda h1{font-size: 27rem;}
-/*MENU*/
-#menu{
+
+#menu {
   position: fixed;
   z-index: 9999; 
   right: 0;
@@ -100,10 +209,6 @@ body{
   float: right;
 
 }
+*/
+
 /*END MENU*/
-
-
-
-
-
-

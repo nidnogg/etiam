@@ -4,7 +4,7 @@ const express  = require('express')
 const app = express()
 const port = 3000
 
-var conn = mysql.createConnection({
+const conn = mysql.createConnection({
     host: "bdgiseli.cmr2oig5ij0x.sa-east-1.rds.amazonaws.com",
     user: "giselao",
     password: "giselaobd489-db"
