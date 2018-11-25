@@ -15,7 +15,8 @@
    Color stack:
    #05080f (black-ish) main background color
    #FD096B (pink) main accent
-
+   #F8E9D6 (retro white)
+   #E3E2E1 (accent white)
    ========================================================================== */
 
 /*
@@ -84,6 +85,10 @@ a {
   text-decoration: none;
 }
 
+/* ==========================================================================
+Section styles - Template for sections
+========================================================================== */
+
 .full_height {
   height: 100em;
 }
@@ -112,6 +117,14 @@ a {
   font-family: 'bebasneuebold', sans-serif !important;
   font-size: 2.5em;
 }
+
+.graph_wrapper {
+  margin-top: 10vh;
+  display: inline-block;
+  width: 400px;
+  height: 250px;
+}
+
 
 /* ==========================================================================
 Home section styles - contains NASA facts main menu screen with the four main project links
