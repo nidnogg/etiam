@@ -126,14 +126,22 @@ Section styles - Template for sections
   position: relative;
   background-color: transparent;
 }
+
+.pkdash_vertical{
+  border: none;
+  border-right: 10px solid #F50868;
+  height: 20vh;
+  width: 1px;  
+  margin-top: -100px;
+  left: 10em;
+}
+
 .graph_wrapper {
   margin-top: 10vh;
   display: inline-block;
   width: 400px;
   height: 250px;
 }
-
-
 /* ==========================================================================
 Home section styles - contains NASA facts main menu screen with the four main project links
 ========================================================================== */
@@ -169,14 +177,7 @@ header.home_header>p {
   width: 9%;
 }
 
-.pkdash_vertical{
-  border: none;
-  border-right: 10px solid #F50868;
-  height: 20vh;
-  width: 1px;  
-  margin-top: -100px;
-  left: 10em;
-}
+
 a.home_nav_link  {
   font-family: 'bebasneuebold';
   font-size: 1.5em;
