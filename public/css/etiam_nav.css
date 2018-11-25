@@ -24,11 +24,13 @@
 
 .nav_wrapper {
   position: fixed;
+  right: 10vh;
   z-index: 9999;
 }
 a.nav_hamburger {
   text-decoration: none;
-  color: #F8E9D6;
+  color: #212121;
+  letter-spacing: .08rem;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
   font-family: 'bebasneuebold', sans-serif !important;
@@ -36,7 +38,7 @@ a.nav_hamburger {
 
 a.nav_hamburger:hover {
   color: #E3E2E1;
-  text-decoration: ;
+  text-decoration: none;
 }
 
 #menuToggle {
@@ -44,8 +46,9 @@ a.nav_hamburger:hover {
   position: relative;
   /*top: 50px; */
   top: 10vh;
-  left: 50px;
+  left: 5vh;
   z-index: 9998;
+
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -136,19 +139,20 @@ a.nav_hamburger:hover {
 
 #menu {
   position: absolute;
-  height: 100vh;
+  height: 110vh;
   width: 20vw;
-  margin: -100px 0 0 -50px;
+  margin: -130px 0 0 -270px;
   padding: 50px;
-  padding-top: 125px;
+  padding-top: 140px;
   background: #FD096B;
+
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
   -webkit-transform-origin: 0% 0%;
   transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
@@ -156,8 +160,12 @@ a.nav_hamburger:hover {
 }
 
 #menu li {
-  padding: 10px 0;
-  font-size: 22px;
+  padding: 8px 0;
+  /*font-size: 22px;*/
+  font-size: 4.5vh;
+  min-height: 2rem;
+  text-transform: lowercase;;
+
 }
 
 /*

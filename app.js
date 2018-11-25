@@ -25,3 +25,4 @@ app.get('/home', (req, res) => res.sendFile(__dirname + "/public/index.html"))
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(port, () => console.log(`Localhost:${port}`))
