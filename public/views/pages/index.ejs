@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
 
 <head>
   <meta charset="utf-8">
@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory - importante -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   
   <!-- Bootstrap versions
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,11 +22,12 @@
   
   
   <!-- additional project css goes here-->
-  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" /> 
+  <link rel="stylesheet" href="/assets/css/stylesheet.css" type="text/css" charset="utf-8" /> 
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
-  <link rel="stylesheet" href="css/particles.css"> 
-  <link rel="stylesheet" href="css/etiam_nav.css">
-  <link rel="stylesheet" href="css/etiam.css">
+  <link rel="stylesheet" href="/assets/css/particles.css"> 
+  <link rel="stylesheet" href="assets/css/etiam_nav.css">
+  <link rel="stylesheet" href="assets/css/etiam.css">
+  <script src="ejs.js"></script>
 </head>
 
 <body>
@@ -109,123 +110,39 @@
   </section>
 
   <section id="astronauts" class="section container-fluid full_height" >
-    <header class="section_header">
-      <h2 class="section_header_text">Astronautas</h2>
-    </header>
-    <section class="section_carousel container-fluid text-center">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <h5>...</h5>
-            <p>...</p>
-          </div>
-          <div class="carousel-item">
-            <h5>...</h5>
-            <p>...</p>
-          </div>
-          <div class="carousel-item">
-            <h5>...</h5>
-            <p>...</p>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-        </a>
-      </div>
-  
-  
-      <!--div class="graph_wrapper">
-          <canvas id="bar-chart" width="800" height="500"></canvas>
-      </div-->
-    </section>
-
+      <%- include('../partials/astronautas') -%>
   </section>
   
   <section id="facilities" class="full_height">
-    <header class="section_header">
-        <h2 class="section_header_text">Instalações</h2>
-      </header>
+      <%- include('../partials/facilities') -%>
   </section>
 
   <section id="eclipses" class="full_height">
-    <header class="section_header">
-        <h2 class="section_header_text">Eclipses</h2>
-      </header>
+      <%- include('../partials/eclipses') -%>
   </section>
 
   <section id="walks" class="full_height">
-    <header class="section_header">
-        <h2 class="section_header_text">Caminhadas no Espaço</h2>
-      </header>
+      <%- include('../partials/walks') -%>
   </section>
 
-  <!-- **************************** pre-refactoring code *************************-->
-  <!--section id="menu">
-    <nav class="navbar navbar-light" >
-      <ul class="nav navbar-nav">
-        <li><a href="#home" class="smooth">Home</a></li>
-        <li><a href="#astronautas" class="smooth">Astronautas</a></li>
-        <li><a href="#asteroides" class="smooth">Asteróides</a></li>
-        <li><a href="#facilities" class="smooth">Instalações</a></li> 
-        <li><a href="#meteoritos" class="smooth">Meteoritos</a><li>
-      </ul>
-    </nav>
-  </section-->
 
-
-  <!-- 
-    <div id=space_bg></div>
-    <section id="home" class="">
-      <div class="title text-center">
-        <h3 class="main_header_text" class="text-center">NASA FACTS</h1>  
-        <hr class="pink_dash_separator">
-        <p>Uma coleção de fatos interessantes sobre a maior <br> companhia espacial do mundo.</p>
-      </div>
-    </section>
-  
-    <section id="astronautas" class="full_height" >
-    </section>
-  
-    <section id="asteroides" class="full_height">
-    </section>
-  
-    <section id="facilities" class="full_height">
-    </section>
-  
-    <section id="meteoritos" class="full_height">
-    </section>
-  
-    <section id="facilities" class="full_height">
-    </section>
-  --> 
 
   <!-- SCRIPTS QUE SÓ DEUS E O CRIADOR DO FRAMEWORK SABEM PQ TAO AI -->
 
 
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer="defer"></script> 
-  <script src="js/particles.js" defer="defer"></script> 
+  <script src="assets/js/particles.js" defer="defer"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <!-- additional project scripts go here -->
   
-  
-  <script src="js/plugins.js"></script>
-  <script src="js/etiam.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/etiam.js"></script>
   <!-- stats.js lib --> 
   <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 

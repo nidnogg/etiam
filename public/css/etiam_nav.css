@@ -141,7 +141,7 @@ a.nav_hamburger:hover {
   position: absolute;
   height: 110vh;
   width: 20vw;
-  margin: -130px 0 0 -270px;
+  margin: -130px 0 0 -300px;
   padding: 50px;
   padding-top: 140px;
   background: #FD096B;
@@ -158,6 +158,7 @@ a.nav_hamburger:hover {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
+
 
 #menu li {
   padding: 8px 0;

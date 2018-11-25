@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Nidnogg/etiam#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "jquery-smooth-scroll": "^2.2.0",
     "mysql": "^2.16.0",
