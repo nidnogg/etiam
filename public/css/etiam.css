@@ -118,6 +118,11 @@ Section styles - Template for sections
   font-size: 2.5em;
 }
 
+
+.section_carousel {
+  position: relative;
+  background-color: transparent;
+}
 .graph_wrapper {
   margin-top: 10vh;
   display: inline-block;

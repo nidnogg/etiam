@@ -18,6 +18,14 @@
 
    ========================================================================== */
 
+
+
+// Carousel code
+$('.carousel').carousel()
+
+
+$('.carousel').carousel('pause')
+
 // Bar chart
 new Chart(document.getElementById("bar-chart"), {
   type: 'bar',
