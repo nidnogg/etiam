@@ -25,21 +25,17 @@
   
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" /> 
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/particles.css"> 
   <link rel="stylesheet" href="css/etiam_nav.css">
   <link rel="stylesheet" href="css/etiam.css">
-  <link rel="stylesheet" href="css/particles.css"> 
 </head>
 
 <body>
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
- 
-  <!--div id="space_bg">
-  </div-->
 
-
-
+  <!--div class="space_bg"></div-->
 
   <!--
     Do relatório: as sessões são:
@@ -56,7 +52,7 @@
       A fake / hidden checkbox is used as click reciever,
       so you can use the :checked selector on it.
       -->
-      <input type="checkbox" />
+      <input type="checkbox"/>
       
       <!--
       Spans p/hamburger
@@ -69,40 +65,64 @@
         <a class="nav_hamburger" href="#"><li>Home</li></a>
         <a class="nav_hamburger" href="#"><li>Sobre</li></a>
         <a class="nav_hamburger" href="#astronauts"><li>Astronautas</li></a>
+        <a class="nav_hamburger" href="#facilities"><li>Instalações</li></a>
+        <a class="nav_hamburger" href="#eclipses"><li>Eclipses</li></a>
+        <a class="nav_hamburger" href="#walks"><li>Caminhadas</li></a>
       </ul>
     </div>
   </nav>
 
-  <section id="home" class="container">
+  <section id="home" class="section container-fluid full_height">
     <header class="home_header">
       <h1>NASA Facts</h1>
       <p>Uma coleção de fatos interessantes sobre a maior <br> companhia espacial do mundo.</p>
       <hr class="pink_dash_separator">
     </header>
-    <nav class="container text-center" role="navigation">
+    <nav class="container text-center home_nav" role="navigation">
 
       <div class="row">
-        <div class="col-sm">
-          Astronautas
+        <div class="home_col col-sm">
+          <a class="home_nav_link" href="#astronauts">
+            Astronautas
+          </a>
         </div>
-        <div class="col-sm">
-          Instalações
+        <div class="home_col col-sm">
+          <a class="home_nav_link" href="#facilities">
+            Instalações
+          </a>
         </div>
       </div>
 
       <div class="row">
         <div class="col-sm">
-          Eclipses
+          <a class="home_nav_link" href="#eclipses">
+            Eclipses
+          </a>
         </div>
         <div class="col-sm">
-          Caminhadas no Espaço
+          <a class="home_nav_link" href="#walks">
+            Caminhadas no Espaço
+          </a>
         </div>
       </div>
 
     </nav>
   </section>
 
+  <section id="astronauts" class="section container-fluid full_height" >
+    <header class="section_header">
+      <h2 class="section_header_text">Astronautas</h2>
+    </header>
+  </section>
+  
+  <section id="asteroides" class="full_height">
+  </section>
 
+  <section id="facilities" class="full_height">
+  </section>
+
+  <section id="meteoritos" class="full_height">
+  </section>
 
   <!-- **************************** pre-refactoring code *************************-->
   <!--section id="menu">
