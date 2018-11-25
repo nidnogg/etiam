@@ -102,14 +102,15 @@ Section styles - Template for sections
 }
 
 .section_header {
-  text-align: right;
+  text-align: left;
   color: #F8E9D6;
   top: 0vh;
-  right: 0vw;
+  left: 10vw;
   z-index: 1;
-  right: 10vw;
   top: 8vh;
   position: relative;
+  font-size: 1.3em;
+  letter-spacing: .2em;
 }
 
 .section_header_text {
@@ -159,13 +160,21 @@ header.home_header>p {
   font-size: 1.3em;
 }
 
-.pink_dash_separator {
+.pink_dash_separator,.pkdash_vertical{
   border-top: 5px solid #F50868;
   position: relative;
   display: inline-block;
   width: 9%;
 }
 
+.pkdash_vertical{
+  border: none;
+  border-right: 10px solid #F50868;
+  height: 20vh;
+  width: 1px;  
+  margin-top: -100px;
+  left: 10em;
+}
 a.home_nav_link  {
   font-family: 'bebasneuebold';
   font-size: 1.5em;
