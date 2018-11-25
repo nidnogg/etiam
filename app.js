@@ -3,7 +3,7 @@ const express  = require('express')
 
 const app = express()
 const port = 3000
-let ejs = require('ejs')
+const ejs = require('ejs')
 
 const conn = mysql.createConnection({
     host: "bdgiseli.cmr2oig5ij0x.sa-east-1.rds.amazonaws.com",
