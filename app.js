@@ -39,8 +39,11 @@ jsonResult = sql_query('SELECT State, COUNT(Name) AS Quantity FROM Facilities GR
     if(err) throw err;
     console.log('Dados recebidos do Banco:\n');
     console.log(rows);
-    return rows
 });
+
+console.log("output >");
+console.log(jsonResult);
+
 
 app.use(express.static(__dirname + '/public/views/pages/'));
 app.use('/assets', express.static(__dirname + '/public'));
@@ -49,7 +52,41 @@ app.set('view engine', 'ejs');;
 
 // Home routes
 
-app.get('/', (req, res) => res.render( __dirname + '/public/views/pages/index.ejs'));
-app.get('/home', (req, res) => res.render(__dirname + 'public/views/pages/index.ejs'));
+
+
+
+var teste = {};
+app.get('/', function(req, res){
+
+       sql_query('SELECT State, COUNT(Name) AS Quantity FROM Facilities GROUP BY (State)', function(err, rows) {
+                
+            if(err){
+                throw err;
+            }else{
+                console.log('Dados recebidos do Banco:\n');
+                console.log(rows);
+                teste = {print: rows};
+                res.render( __dirname + '/public/views/pages/index.ejs', { data: rows });          
+            }
+        });
+
+});
+app.get('#eclipses', function(req, res){
+
+       sql_query('SELECT State, COUNT(Name) AS Quantity FROM Facilities GROUP BY (State)', function(err, rows) {
+                
+            if(err){
+                throw err;
+            }else{
+                console.log('Dados recebidos do Banco:\n');
+                console.log(rows);
+                teste = {print: rows};
+                res.render( __dirname + '/public/views/pages/index.ejs', { data: rows });          
+            }
+        });
+
+});
+
+app.get('/', (req, res) => res.render(__dirname + 'public/views/pages/index.ejs'));
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

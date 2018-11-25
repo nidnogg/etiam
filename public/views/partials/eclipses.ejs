@@ -3,5 +3,14 @@
 </header>
 <hr class="pink_dash_separator pkdash_vertical">
 
-    
+
+
+    <table style="color:white!important;font-size:5em;">
+  		 <% for(var i=0; i<data.length; i++) {%>
+        <tr>
+          <th><%= data[i]['State'] %></th>
+          <th><%= data[i]['Quantity'] %></th>
+        </tr>
+      <% } %>
+    <table>
 
