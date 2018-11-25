@@ -97,31 +97,22 @@ a {
 }
 
 .section_header {
-  text-align: left;
+  text-align: right;
   color: #F8E9D6;
   top: 0vh;
   right: 0vw;
   z-index: 1;
-  left: 10vw;
-  top: 10vh;
+  right: 10vw;
+  top: 8vh;
   position: relative;
 }
 
-/*
 .section_header_text {
   position: relative;
-}
-.section_header_text::after {
-  content: "";
-  width: 10px;
-  height: 100vh;
-  top: 0px;
-  right: 10px;
-  position: absolute;
-  background-color: #F50868;
+  font-family: 'bebasneuebold', sans-serif !important;
+  font-size: 2.5em;
 }
 
-*/
 /* ==========================================================================
 Home section styles - contains NASA facts main menu screen with the four main project links
 ========================================================================== */
@@ -136,7 +127,7 @@ Home section styles - contains NASA facts main menu screen with the four main pr
 header.home_header {
   text-align: center;
   color: #F8E9D6;
-  padding-top: 20vh;
+  padding-top: 25vh;
   z-index: 9999;
 }
 
