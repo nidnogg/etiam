@@ -1,9 +1,14 @@
-const mysql = require('mysql');
 const express  = require('express');
+const ejs = require('ejs');
+const mysql = require('mysql');
 
 const app = express();
 const port = 3000;
-const ejs = require('ejs');
+
+
+console.log("Servidor app.js online");
+
+
 
 const conn = mysql.createConnection({
     host: "bdgiseli.cmr2oig5ij0x.sa-east-1.rds.amazonaws.com",
@@ -16,9 +21,6 @@ conn.connect(function(err) {
     console.log("Conectou ao banco");
 });
 
-
-console.log("Servidor app.js online");
-
 function sql_query(qry, callback) {
     conn.query(qry, function(err,rows) {
         if (err) return callback(err);
@@ -26,67 +28,39 @@ function sql_query(qry, callback) {
     });
 }
 
-// Query p/usar Database
+// setando banco a ser usado
 sql_query('USE BDGISELI', (err => {
     if(err) throw err;
     console.log('Usando BDGISELI\n');
 }));
 
-// Query Astronautas Gênero Feminino
-let jsonResult;
 
-jsonResult = sql_query('SELECT State, COUNT(Name) AS Quantity FROM Facilities GROUP BY (State)', (err, rows) => {
-    if(err) throw err;
-    console.log('Dados recebidos do Banco:\n');
-    console.log(rows);
-});
-
-console.log("output >");
-console.log(jsonResult);
-
+// Consultas
+let obj = {};
+let astronautas_por_estado = 'SELECT State, COUNT(Name) AS Quantity FROM Facilities GROUP BY (State)';
 
 app.use(express.static(__dirname + '/public/views/pages/'));
 app.use('/assets', express.static(__dirname + '/public'));
-//ejs view engine
+
+// ejs view engine
 app.set('view engine', 'ejs');;
-
-// Home routes
-
-
-
-
-var teste = {};
-app.get('/', function(req, res){
-
-       sql_query('SELECT State, COUNT(Name) AS Quantity FROM Facilities GROUP BY (State)', function(err, rows) {
-                
-            if(err){
-                throw err;
-            }else{
-                console.log('Dados recebidos do Banco:\n');
-                console.log(rows);
-                teste = {print: rows};
-                res.render( __dirname + '/public/views/pages/index.ejs', { data: rows });          
-            }
-        });
-
-});
-app.get('#eclipses', function(req, res){
-
-       sql_query('SELECT State, COUNT(Name) AS Quantity FROM Facilities GROUP BY (State)', function(err, rows) {
-                
-            if(err){
-                throw err;
-            }else{
-                console.log('Dados recebidos do Banco:\n');
-                console.log(rows);
-                teste = {print: rows};
-                res.render( __dirname + '/public/views/pages/index.ejs', { data: rows });          
-            }
-        });
+// routes
+ 
+ app.get('/', function(req, res){
+    sql_query(astronautas_por_estado, function(err, rows) {
+        if(err){
+            throw err;
+        }else{
+            console.log('Dados recebidos do Banco:\n');
+            console.log(rows);
+            obj = {data: rows};
+            res.render( __dirname + '/public/views/pages/index.ejs',obj);          
+        }
+    });
 
 });
 
-app.get('/', (req, res) => res.render(__dirname + 'public/views/pages/index.ejs'));
+app.get('/home', (req, res) => res.render(__dirname + '/public/views/pages/index.ejs'));
+
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
