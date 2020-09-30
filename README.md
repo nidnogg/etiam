@@ -1,5 +1,5 @@
 # etiam
-this is a databases project for the Federal University of Rio de Janeiro
+This is a databases project for the Federal University of Rio de Janeiro.
 
 ## Dependencies
 
